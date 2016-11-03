@@ -294,6 +294,8 @@ class BP_Group_Types_UI extends BP_Types_UI {
 				// Should this type have a directory? Custom slug?
 				if ( 'on' == $meta['has_directory'] ) {
 					$has_directory = $meta['has_directory_slug'] ? $meta['has_directory_slug'] : true;
+				} else {
+					$has_directory = false;
 				}
 
 				bp_groups_register_group_type( $meta['type_id'], array(
